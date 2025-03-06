@@ -1,7 +1,7 @@
 "use client"
 
 import "./style.css"
-import { useParams } from 'next/navigation'
+import { useParams, useRouter } from 'next/navigation'
 import { format } from "date-fns";
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
@@ -12,7 +12,7 @@ const hotelOrders = () => {
  const [searchId,setSearchId]=useState("")
     const {id}=useParams()
    
-
+  const navigate=useRouter()
     const fetchHotelData=async()=>{
  
         try{
@@ -36,7 +36,9 @@ const hotelOrders = () => {
       return (
         <>
         <div className="page">
-    <div className="head1">hotelOrders of hotel :{id}</div>
+    <div className="head1">
+        <div className="home_back">
+          <button onClick={()=>navigate.push(`/hotel-services/${id}`)}>dashboard</button>
     <div className="search">
       <img src="/search-line.png"/>
         <input
@@ -44,6 +46,10 @@ const hotelOrders = () => {
         value={searchId}
          onChange={(e)=>setSearchId(e.target.value)}/>
          
+         </div>
+         </div>
+       
+       <p>  hotelOrders of hotel :{id}</p>
          </div>
     <div className="head2">Your orders are --</div>
     <div className="receiptContainer">

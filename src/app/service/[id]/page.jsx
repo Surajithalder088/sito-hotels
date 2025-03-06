@@ -134,7 +134,7 @@ const Service = () => {
         className="btn">{loading ?
         (
           <CircularProgress />
-        ):"Order"}</button>
+        ):"Back to hotel to order it "}</button>
        </div>
       <div className="Card">
         <motion.div 

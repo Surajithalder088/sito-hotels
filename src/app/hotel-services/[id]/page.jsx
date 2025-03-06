@@ -76,10 +76,11 @@ const handleSubmit=async(e)=>{
         <>
         <div className="aboutehotel">
           <div>
-            <p className="hotelname">Email of this hotel is : {hotel.email}</p>
-          
-            <p className="aboute">Totel Service Provided : {hotel.services.length}</p>
-            <p  className="aboute">This hotel is Registered at : {hotel.createdAt}</p>
+          <p className="hotelname">Name : {hotel.name}</p>
+            <p className="hotelname">Email : {hotel.email}</p>
+            <p className="hotelname">Address: {hotel.address}</p>
+            <p className="aboute">Totel Services: {hotel.services.length}</p>
+            <p  className="aboute"> Registered at : {hotel.createdAt}</p>
       </div> <div className="edit">
         <Link href={`/hotel-edit/${id}`}>
         <img src="/pencil-fill.svg"/>
@@ -172,7 +173,7 @@ const handleSubmit=async(e)=>{
     <div className="allservices">
      
    {
-        services.filter((service)=>service && service._id)
+        services.filter((service)=>service && service._id && service.name)
         .map(service=>(
        <Service l={service} key={service._id} />
         ))

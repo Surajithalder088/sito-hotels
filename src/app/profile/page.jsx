@@ -72,13 +72,17 @@ const Profile = () => {
         (
 
        <div className="user">
+        <div className="user1">
+        <img src='/user-3-fill.png'/>
       <div  className="userinfo">
+        <p>Name:{user.name}</p>
         <p>Email - {user.email} </p>
         <p>Id -{user._id}</p>
         <p>total orders :{user.receipts.length}</p>
         <p>acb road, kol-768906</p>
         
       </div >
+      </div>
       <button className="logout"
         onClick={logOut}
         >Logout</button>

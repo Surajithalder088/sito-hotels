@@ -22,7 +22,7 @@ const Receipt = () => {
       const [service,setService]=useState([])
       const [hoteldata,setHoteldata]=useState({})
       const[starvalue,setStarvalue]=useState(1)
-      const [reviewText,setReviewText]=useState("default review")
+      const [reviewText,setReviewText]=useState("")
       const starArray=[1,2,3,4,5]
      
 

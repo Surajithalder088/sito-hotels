@@ -3,9 +3,14 @@
     background: #000;
 }
 .head1{
+    display: flex;
+    justify-content: space-between;
     color: #fff;
     font-family:cursive;
     font-size: 25px;
+}
+.head1 p{
+    font-size: 20px;
 }
 .search{
     width: 450px;
@@ -25,6 +30,20 @@
     padding: 5px;
     font-family: cursive;
     font-weight: 800;
+}
+.home_back{
+    color:#fff;
+   
+}
+.home_back button{
+    background-color: #5e5c5c;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 10px;
+
+}
+.home_back button:hover{
+    background-color: #868686;
 }
 .head2{
     color: #fff;

@@ -18,6 +18,7 @@ import { clearCart } from "@/lib/features/orderCart/orderCartSlice"
 import { receiptCreate } from "@/utils/api"
 import Loading from "@/app/{component}/Loading/page"
 import Speech from "@/app/{component}/Speech/page"
+import { Warning } from "postcss"
 
 
 
@@ -54,7 +55,10 @@ const api=process.env.NEXT_PUBLIC_API_URL
 
    const orderHandler=async(e)=>{
 e.preventDefault()
-
+      if(orderCart.items.length===0){
+        alert("select at least one item to order") //will set toast message
+        return
+      }
     try{
      
       setOrdering(true)
@@ -189,11 +193,13 @@ e.preventDefault()
         
         <div className="aboutehotel">
             <div className="name">
-            <p className="aboute"> {hotel.name}</p>
-            <p className="">{hotel.email}</p>
+             <h3>{hotel.name}</h3>
+            <p className="">({hotel.email})</p>
+            <p className="">{hotel.address}</p>
             </div>
-            <p className="aboute">Totel Service Provided : {hotel.services.length}</p>
-            <p  className="aboute">This hotel is Registered at : {format(new Date(hotel.createdAt ),'dd MMM yyyy,hh:mm a')}</p>
+             <img className="phone" src="/vercel.svg" onClick={()=>alert("call to hotel ")}/>
+            <p className="aboute">Totel Services: {hotel.services.length}</p>
+            <p  className="aboute">hotel is Registered at : {format(new Date(hotel.createdAt ),'dd MMM yyyy,hh:mm a')}</p>
            
            <div className="reveiw"><img src="/star-fill.png"/><p>{(hotel.starValue /hotel.starQunatity) ||0 }</p>
             <p>({hotel.starQunatity})</p>
@@ -205,7 +211,7 @@ e.preventDefault()
      </div>
      <div className="textPadH">
      <TypeAnimation 
-           sequence={[`Search desire items from our Hotel !`, 1000, 'Add as many items to order cart!', 1000]}
+           sequence={[`Search your favourite food or desire room  from our Hotel !`, 1000, 'Add multiple items to order cart!', 1000]}
            wrapper='span'
            speed={35}
            deletionSpeed={85}

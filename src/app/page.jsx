@@ -135,9 +135,7 @@ const authUser=useSelector((state)=>state.authUser.type)
    <div className="home">
    <div className='navbarContainer'> 
    <div className="links" >
-        <Link href={'/'}>
-       <img src="/home-2-fill.png" className="icon" />
-        </Link>
+       <h1>SITO</h1>
         </div>
     
    <div className="navFilter">

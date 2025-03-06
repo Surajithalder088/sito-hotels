@@ -25,7 +25,7 @@ const divVariant={
 }
 
 const Service = ({l}) => {
-  if(!l || !l._id){
+  if(!l || !l._id ||!l.name){
     console.error(" invalid data",l)
     return<p>
        invalid service  data
@@ -74,10 +74,11 @@ const deleteHandler =async(e)=>{
         </button>
      </div>
             <div className="desc1">
-            <div className=''> {l.name}</div>
-            <div className='type'>Service Type is : {l.type}</div>
+           
+            <div className='type'> {l.name}</div>
+             <div className=''> {l.type}</div>
           <div className='details'>
-            <p className="para">Description of the service : </p>{l.details}
+            <p className="para">Description  : </p>{l.details}
             </div>
          
             </div>
