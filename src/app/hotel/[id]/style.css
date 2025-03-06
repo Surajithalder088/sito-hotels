@@ -1,0 +1,184 @@
+.hotelContainer{
+    margin: 0;
+    padding: 0;
+    background: #cdb3eb;
+
+}
+.navbar{
+    width: 100vw;
+    height: 4rem;
+    background: #e7e3e3;
+}
+.filters{
+   width: 100vw;
+   background-image: linear-gradient(45deg,  #000000 0%,  #ffffff 100%);
+   height: 3rem;
+   position: fixed;
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+}
+.filters button{
+    padding: 6px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-family: fantasy;
+}
+.filters button:hover{
+    background-color: #000000;
+    color: #fff;
+    cursor: pointer;
+}
+.aboutehotelContainer{
+    margin: 2rem 0 2rem  0;
+    background-image: linear-gradient(45deg,  #6407a1 0%,  #ffffff 100%);
+   
+    color: #fff;
+    height: 45vh;
+    display: flex;
+}
+.aboutehotel{
+    background-color: #2f115e;
+    margin: 20px;
+    height: 70%;
+    padding: 10px;
+    width: 50%;
+    border-radius: 10px;
+    
+}
+.reveiw{
+    display: flex;
+    align-items: center;
+    margin: 5px;
+}
+
+.reveiw img{
+    color: chocolate;
+}
+.name{
+    font-family: 'Courier New', Courier, monospace;
+  
+   
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+.hotelimg{
+    height: 80%;
+    width: full;
+    margin-top: 1.8rem;
+    border-radius: 10px;
+}
+.aboute{
+    font-size: 20px;
+}
+.orderCart{
+    background-color: #2f115e;
+    margin:20px;
+    max-height: 80%;
+    padding: 20px;
+   max-width:  25%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+}
+.orderCart h5 {
+    color: aqua;
+    flex: 1;
+}
+.cartlist{
+    background-color: #000000;
+    max-height: 400px;
+    width: 300px;
+    overflow: scroll;
+    padding: 10px;
+    flex: 3;
+}
+.cartItem{
+    display: flex;
+    gap: 20px;
+    background-color: #535252;
+    border-radius: 10px;
+    padding: 5px;
+    margin-bottom:5px ;
+}
+.cartItem p{
+    font-size: 15px;
+}
+.cartBtn{
+    display: flex;
+    gap: 20px;
+   padding-top: 10px;
+}
+.cartBtn button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 45px;
+    background-color: #c79df7;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 25px;
+    font-family: fantasy;
+    object-fit: contain;
+}
+.cartBtn button:hover{
+    background-color: #9046e6;
+    color: #fff;
+    cursor: pointer;
+}
+.circle{
+    color: #000000;
+    font-size: 20px;
+}
+
+.allservices{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+.allservices h1{
+   font-family: monospace;
+}
+.textH{
+    position:relative;
+   
+    width: 300px;
+    height: 80px;
+   
+    z-index: 9999;
+    display: flex;
+    
+    justify-content: space-between;
+}
+.textPadH{
+    width: fit-content;
+    height:fit-content;
+    background:#9046e6;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 0 20px  20px 20px ;
+}
+.textPad p{
+    font-size: 20px;
+    font-family: cursive;
+}
+.textIconH{
+    background-color: #bb91eb;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    padding: 10px;
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+.textIconH img{
+    width: 20px;
+    height: 20px;
+}

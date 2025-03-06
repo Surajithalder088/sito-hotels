@@ -1,0 +1,32 @@
+.navbarContainer{
+    width: 100vw;
+    height: 2.5rem;
+    background: #888787;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+.icon{
+    background: #fff;
+    padding: 5px;
+    border-radius: 50%;
+ }
+ .icon:hover{
+     padding: 18px;
+ }
+.logo{
+    display: flex;
+    align-items: center;
+    margin-left: 2rem;
+}
+.links{
+    display: flex;
+    align-items: center;
+    width: 50%;
+    gap: 300px;
+}
+.logo h1{
+    font-size: 20px;
+}

@@ -1,0 +1,78 @@
+.page{
+    padding: 25px;
+    background: #000;
+}
+.head1{
+    color: #fff;
+    font-family:cursive;
+    font-size: 25px;
+}
+.search{
+    width: 450px;
+    background-color: #fff;
+    height: 30px;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.search input{
+    width: 400px;
+    height: 25px;
+    border-radius: 20px;
+    padding: 5px;
+    font-family: cursive;
+    font-weight: 800;
+}
+.head2{
+    color: #fff;
+    font-family:cursive;
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+
+.receiptContainer{
+    background: #cccbcb;
+    overflow-y: scroll;
+    width: 90vw;
+    height: 60vh;
+    padding: 20px;
+    border-radius: 10px;
+
+}
+.receipt{
+    display: flex;
+    gap: 300px;
+    width: 90%;
+    background-color: rgb(231, 227, 227);
+    padding: 20px;
+    margin: 10px;
+    border-radius: 20px;
+}
+.left p{
+    font-size: 15px;
+    font-family:monospace;
+    font-weight: 700;
+}
+.paym{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.paid{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgb(3, 204, 127);
+    border: 1px solid black;
+}
+.pending{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgb(214, 5, 68);
+    border: 1px solid black;
+}

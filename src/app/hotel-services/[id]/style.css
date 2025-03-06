@@ -1,0 +1,135 @@
+.hotelContainer{
+    margin: 0;
+    padding: 0;
+    background: #bb91eb;
+
+}
+.aboutehotelContainer{
+    margin: -1rem 0 1rem  0;
+    background: #644588;
+    color: #fff;
+    height: 47vh;
+    display: flex;
+    object-fit: contain;
+}
+.aboutehotel{
+    background-color: #2f115e;
+    display: flex;
+    margin: 20px;
+    height: 70%;
+    padding: 20px;
+    width: 50%;
+    border-radius: 10px;
+}
+.hotelname{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 500;
+    font-size:30px ;
+}
+.hotelimg{
+    height: 80%;
+    width: full;
+    margin-top: 1.8rem;
+    border-radius: 10px;
+}
+.aboute{
+    font-size: 20px;
+}
+.newform{
+    width: 400px;
+    height: 80%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    object-fit: contain;
+   
+}
+.newform form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid black;
+    background: #b4b0b0;
+    border-radius: 10px;
+}
+.newform form h5{
+    color: #000;
+    font-weight: 200;
+    font-size: 20px;
+}
+.newform form input{
+    padding: 5px;
+    font-size: 12px;
+    width: 90%;
+}
+.newform form textarea{
+    padding: 5px;
+    font-size: 12px;
+    width: 90%;
+}
+.add{
+    width: 50%;
+    height: 30px;
+    border-radius: 10px;
+    background: #000;
+    color: #b4b0b0;
+}
+.add:hover{
+    color: #000;
+    background-color: #fff;
+    cursor: pointer;
+}
+.select{
+    display: flex;
+}
+.ordersBtn{
+    width: fit-content;
+    height: 80%;
+    background-color: #2f115e;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-right: 10px;
+
+}
+.ordersBtn button{
+    background-color: #bb91eb;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 10px;
+}
+.ordersBtn button:hover{
+    background-color: #532557;
+    color: #fff;
+    cursor: pointer;
+}
+.ordersBtn h5{
+    font-size: 25px;
+}
+
+.allservices{
+    display: flex;
+    flex-wrap: wrap;
+}
+.edit{
+    background-color: #644588;
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+}
+.edit img{
+    width: 25px;
+    height: 25px;
+}
+.edit:hover{
+    background-color: #fff;
+}

@@ -1,0 +1,58 @@
+.formcontainer{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #000;
+}
+.editForm{
+    width: 50%;
+    height: 80%;
+    background-color: rgba(205, 154, 235, 0.493);
+    border-radius: 20px;
+}
+.editForm form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:20px;
+    padding: 20px;
+}
+.editForm form h5{
+    font-size: 25px;
+}
+.editForm form button{
+    background-color: rgba(166, 61, 226, 0.493);
+    width: 50%;
+    height: 35px;
+    color: #fff;
+    font-size: 22px;
+    border-radius: 10px;
+    padding: 7px;
+}
+.input input{
+    padding: 10px;
+    border-radius: 10px;
+    width: full;
+    font-size: 20px;
+    background: #777676;
+    color: #fff;
+}
+.input{
+    display: flex;
+    gap: 15px;
+}
+.input p{
+    font-size: 20px;
+    color: #fff;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.input textarea{
+    padding: 10px;
+    border-radius: 10px;
+    width: full;
+    font-size: 20px;
+    background: #777676;
+    color: #fff;
+}

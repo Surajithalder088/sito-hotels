@@ -1,0 +1,97 @@
+.paymentContainer{
+    margin: 0;
+    padding: 0;
+    background: #000;
+ 
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.cardid{
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 5px;
+}
+.paymentForm{
+    padding:0 50px 40px 50px;
+    background-color: #fff;
+    width: 200px;
+    height:200px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #000;
+
+}
+.access{
+    display: flex;
+}
+.input{
+    padding: 10px ;
+    outline: none;
+    border-radius: 20px;
+    width: 100%;
+    margin-top: 30px;
+}
+.paybill{
+    margin: 50px 0;
+    background-color: rgb(151, 180, 241);
+    width: 30%;
+    height: 40px;
+    font-size: larger;
+    font-weight: 600;
+    cursor: pointer;
+}
+.paybill:hover{
+    background: #000;
+    color: #fff;
+}
+.upi{
+    padding: 10px;
+    width: 50%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(205, 225, 241);
+    border-radius: 20px;
+}
+.upi:hover{
+    cursor: pointer;
+}
+.gpay{
+    background: #000;
+    padding: 5px;
+    color: #ffffff;
+    font-weight: 600;
+    margin: 0 5px;
+    border-radius: 10px;
+}
+.stripe{
+   width: 40vw;
+   padding: 4rem;
+   height: 100px;
+   border: 1px solid black;
+   margin: 6rem;
+    
+   
+}
+@keyframes spin{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.loader{
+    width: 40px;
+    height: 40px;
+    color: aqua;
+    animation: spin 1s linear infinite;
+}

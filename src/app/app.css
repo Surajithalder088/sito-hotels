@@ -1,0 +1,239 @@
+.home{
+    height: 100vh;
+}
+.demonav{
+    height: 4rem;
+    background-color: rgb(241, 243, 243);
+}
+.navbarContainer{
+    width: 100vw;
+    height: 2.4rem;
+    background: #696868;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+    position: fixed;
+}
+.navFilter{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 50px;
+    width: 50%;
+}
+.navFilter h5{
+   font-size: 16px;
+}
+.fil{
+    display: flex;
+    border: 1px solid white;
+    background-color: #cfcece;
+    padding: 5px;
+    border-radius: 20px;
+}
+.fil:hover{
+    cursor: pointer;
+    background-color: #858585;
+    color: #fff;
+}
+.fil label{
+    color: #4d4a4a;
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    font-family:cursive;
+    font-weight: 800;
+
+}
+.fil label:hover{
+    cursor: pointer;
+}
+
+
+.links{
+    display: flex;
+    align-items: center;
+    width: 50%;
+   margin-left: 100px;
+   
+}
+.linksp{
+    display: flex;
+    align-items: center;
+    width: 50%;
+    justify-content: center;
+    
+}
+.logo h1{
+    font-size: 30px;
+}
+.icon{
+    width: 15px;
+   background: #fff;
+   padding: 5px;
+   border-radius: 50%;
+}
+.icon:hover{
+    padding: 8px;
+}
+.filterChoice{
+    width: 98vw;
+    height: 2.5rem;
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid black;
+    position: fixed;
+    background: rgb(3,2,31);
+background: linear-gradient(90deg, rgba(3,2,31,1) 0%, rgba(143,30,213,0.9752275910364145) 67%, rgba(0,18,255,1) 100%);
+}
+.choice{
+    width: 98vw;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+   padding-bottom: 20px;
+  
+}
+.choice h3{
+    color: aqua;
+    font-family: monospace;
+    font-size: 16px;
+}
+.choice h5{
+    color: rgb(216, 216, 216);
+    font-size: 15px;
+    font-weight: 700;
+}
+.roomChoice{
+display: flex;
+justify-content: space-around;
+align-items: center;
+
+
+}
+.restaurantChoice{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+    }
+.selectLoc{
+    display: flex;
+    align-items: center;
+}
+.selectType{
+    display: flex;
+    align-items: center;
+}
+.selectPrice{
+    display: flex;
+    align-items: center;
+}
+.selectP{
+    font-family:monospace;
+    font-weight: 700;
+    font-size: 18px;
+    color: #fffefe;
+}
+.selectinput{
+    height: 30px;
+    background-color: #a3a2a2;
+    border-radius: 10px;
+    margin-left: 20px;
+}
+.selectinput:hover{
+    cursor: pointer;
+}
+
+.searchbtn{
+    height: 30px;
+    background-color: rgb(25, 62, 92);
+    color: #fff;
+    padding: 5px;
+    font-weight: 700;
+    border-radius: 10px;
+    border: none;
+}
+.searchbtn:hover{
+    cursor: pointer;
+    background: #5986da;
+    color: #000;
+}
+.nodata{
+    height: 75vh;
+    width: 98vw;
+    background: #949393;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sList{
+    z-index: -1;
+    margin-top: 4rem;
+    display: flex;
+   flex-wrap: wrap;
+   background-color: #ffffff;
+   border: 1px solid black;
+}
+.text{
+    position:fixed;
+   bottom:  20px;
+    right: 30px;
+    width: 400px;
+    height: 80px;
+   
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.text:hover{
+    cursor: not-allowed;
+}
+.textPad{
+  
+    width:fit-content;
+    height:fit-content;
+    background:#fff;
+    border: 1px solid black;
+    padding: 10px;
+    display: flex;
+    border-radius: 20px  20px 0 20px ;
+}
+.textPad p{
+    font-size: 20px;
+    font-family: cursive;
+}
+.textIcon1{
+  background-color: #4d4a4a;
+   
+    width: fit-content;
+    height: fit-content;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+.textIcon1 img{
+    width: 30px;
+    height: 30px;
+}
+
+.textIcon2{
+    background-color: #868585;
+     padding: 10px;
+      width: fit-content;
+      height: fit-content;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+     
+  }
+  .textIcon2 img{
+      width: 20px;
+      height: 20px;
+  }
