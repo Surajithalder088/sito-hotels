@@ -32,9 +32,13 @@ const Register = () => {
     }
   return (
    <>
-   <div className="loginContainer">
+   <div className="registerContainer">
     <div className="card">
         <h3>Register</h3>
+        <div className="googleAuth">
+            <img src='/google-icon.png'/>
+                    <p>register with google</p>
+                </div>
         <div className="formR">
             
             <form onSubmit={apiregister}>

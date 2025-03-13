@@ -1,10 +1,27 @@
-.loginContainer{
+.registerContainer{
     margin: 0;
     padding: 60px;
     background: #414040;
     height: 100vh;
     display: flex;
     justify-content: center;
+}
+.googleAuth{
+    background-color: #fff;
+    padding: 0 5px;
+    border-radius: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+.googleAuth:hover{
+    cursor: pointer;
+    background-color: #584242;
+}
+.googleAuth img{
+    width: 20px;
+    height: 20px;
 }
 .card{
     width: 50%;

@@ -40,9 +40,13 @@ const login = () => {
    <div className="loginContainer">
     <div className="heading">
     <h3>An authenticate customer has access to all the services of this platform,so Login first</h3>
+    <button className='hotelLogin'
+    onClick={()=>redirect('/hotel-login')}
+    >Login as Hotel</button>
    </div>
-    <div className="card">
-        <h3>Login</h3>
+    <div className="cardl">
+        <h3>Login as Customer</h3>
+       
         <div className="form">
             
             <form onSubmit={ loginHandler}>
@@ -58,6 +62,11 @@ const login = () => {
                  />
                  <button className={loading?"load":"loginbtn"} type='submit'>{loading?"Loading..":"Login"}</button>
             </form>
+            
+        </div>
+        <div className="googleAuth">
+        <img src='/google-icon.png'/>
+            <p>login with google</p>
         </div>
         <p className='p'>New Customer?Register first :<Link href={'/register'}>Register</Link></p>
     </div>
