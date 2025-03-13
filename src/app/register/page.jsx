@@ -35,7 +35,9 @@ const Register = () => {
    <div className="registerContainer">
     <div className="card">
         <h3>Register</h3>
-        <div className="googleAuth">
+        <div className="googleAuth"
+        
+        style={{background:'#535353'}}>
             <img src='/google-icon.png'/>
                     <p>register with google</p>
                 </div>

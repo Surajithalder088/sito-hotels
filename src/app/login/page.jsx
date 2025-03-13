@@ -64,7 +64,10 @@ const login = () => {
             </form>
             
         </div>
-        <div className="googleAuth">
+        <div 
+        onClick={(e)=>{e.preventDefault() 
+            alert('Google login is under implementation now.')}}
+        className="googleAuth">
         <img src='/google-icon.png'/>
             <p>login with google</p>
         </div>

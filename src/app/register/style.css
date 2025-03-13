@@ -7,9 +7,9 @@
     justify-content: center;
 }
 .googleAuth{
-    background-color: #fff;
+    background-color: #474747;
     padding: 0 5px;
-    border-radius: 10%;
+    border-radius: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
