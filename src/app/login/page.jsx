@@ -70,6 +70,11 @@ const login = () => {
         </div>
         <p className='p'>New Customer?Register first :<Link href={'/register'}>Register</Link></p>
     </div>
+    <div className='demoLogin'>
+        <p>For testing,login as demo customer <br/>
+        Email: user1@mail.com <br/>
+        password: 123456</p>
+    </div>
    </div>
    </>
   )

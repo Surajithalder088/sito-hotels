@@ -113,3 +113,26 @@
 .load{
     cursor: progress;
 }
+
+.demoLogin{
+    margin-left: 5px;
+   bottom: 0;
+    left: 50px;
+    border-radius: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    max-width: fit-content;
+    gap: 2px;
+    padding: 2px;
+    background-color: #000000;
+    color: rgb(247, 164, 164);
+    font-size: 20px;
+    position: fixed;
+    border: 1px solid #fff;
+}
+.demoLogin:hover{
+    color: #fff;
+   
+    
+}
