@@ -6,19 +6,20 @@ export const orderCartSlice=createSlice({
     name:'orderCart',
     initialState:{
       items:[],
+      totalDays:0,
       totalQuantity:0,
       totalPrice:0
         
     },
     reducers:{
         addToCart:(state,action)=>{
-            const {id,name,price}=action.payload;
+            const {id,name,price,type}=action.payload;
             const existingItem=state.items.find((item)=>item.id===id)
             if(existingItem){
                 existingItem.quantity +=1;
 
             }else{
-                state.items.push({id,name,price,quantity:1})
+                state.items.push({id,name,price,type,quantity:1,days:1})
             }
             state.totalQuantity +=1;
             state.totalPrice +=price
@@ -46,6 +47,17 @@ export const orderCartSlice=createSlice({
             }
 
         },
+        updateDays:(state,action)=>{
+            const {id,days}=action.payload
+            const existingItem=state.items.find((item)=>item.id===id)
+            if(existingItem && days>0){
+                const difference= days -existingItem.days;
+                state.totalDays +=difference;
+                state.totalPrice += difference* existingItem.price;
+                existingItem.days +=difference
+            }
+
+        },
         clearCart:(state)=>{
             state.items=[]
             state.totalPrice=0
@@ -55,7 +67,7 @@ export const orderCartSlice=createSlice({
     }
 })
 
-export const {addToCart,removeFromCart,updateQuantity,clearCart}=orderCartSlice.actions;
+export const {addToCart,removeFromCart,updateQuantity,clearCart,updateDays}=orderCartSlice.actions;
 
 export default orderCartSlice.reducer;
 

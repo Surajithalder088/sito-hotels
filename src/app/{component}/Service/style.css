@@ -56,13 +56,39 @@
 .cartHandle{
     display: flex;
     align-items: center;
+    justify-content: space-around;
+    gap: 10px;
 }
 .cartHandle button{
     width: 25px;
 
 }
+.cartHandle p{
+    color: #b3b2b2;
+}
 .number{
+    font-weight: 600;
+    font-size: 15px;
     color: #fff;
+}
+.checkouts{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+.cartHandled{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+    background-color: #b3b0b0;
+    padding: 0 5px;
+    border-radius: 20px;
+}
+.numberd{
+    font-weight: 600;
+    font-size: 15px;
 }
 .desc1{
    

@@ -64,7 +64,7 @@ e.preventDefault()
       setOrdering(true)
        let price=orderCart.totalPrice
     let services=orderCart.items.map(item=>item.id)
-    let details=orderCart.items.map(item=>(` name:${item.name},quantity:${item.quantity},price:${item.price}  .`))
+    let details=orderCart.items.map(item=>(item.id` name:${item.name},quantity:${item.quantity},price:${item.price}  ${item.type==="room"?"Days:":""} ${item.type==="room"?item.days:""}.`))
       console.log({userEmail,type,price,services,details});
 
     const receipt= await axios.post(api+`/api/receipt/receipt-create/${id}`,{userEmail,type:"various",price,services,details},{withCredentials: true})
@@ -72,9 +72,9 @@ e.preventDefault()
     
       
      console.log(receipt.data);
-     dispatch(clearCart())
+     
      route.push(`/receipt/${receipt.data.receipt._id}`)
-
+      dispatch(clearCart())
     }catch(error){
       console.log(error);
       setOrdering(false)
@@ -243,6 +243,7 @@ e.preventDefault()
               <p>{item.name}</p>
               <p>{item.price}</p>
               <p>{item.quantity}</p>
+            { item.type==="room" ? <p>{item.days}days</p>:""}
               
             </div></li>
             

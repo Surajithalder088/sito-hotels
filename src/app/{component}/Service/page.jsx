@@ -5,7 +5,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import "./style.css"
 import { motion, useInView } from 'motion/react'
 import { useDispatch, useSelector } from 'react-redux'
-import { addToCart, removeFromCart, updateQuantity } from '@/lib/features/orderCart/orderCartSlice'
+import { addToCart, removeFromCart, updateQuantity,updateDays } from '@/lib/features/orderCart/orderCartSlice'
 
 
 
@@ -40,6 +40,7 @@ const   isInView=useInView(ref,{margin:"-200px"})
 
 const [add,setAdd]=useState(false)
 const [number,setNumber]=useState(1)
+const [days,setDays]=useState(1)
 
 
 
@@ -76,13 +77,14 @@ useEffect(() => {
               <button
           onClick={()=>{
             setAdd(!add)
-            dispatch(addToCart({id:l._id,name:l.name,price:l.price}))
+            dispatch(addToCart({id:l._id,name:l.name,price:l.price,type:l.type==="room"?"room":"food"}))
           }}
           >
           Add
           </button>
 
-              ):(<button
+              ):(
+              <button
                 onClick={()=>{
                   setAdd(!add)
                   dispatch(removeFromCart({id:l._id}))
@@ -93,10 +95,11 @@ useEffect(() => {
 
               )
             }
-          
+         
           {
             !add ?"":(
               <div className='cartHandle' >
+                 <p>quantity</p>
                 {
                   number>=1?(
                     <button className="quan" 
@@ -119,6 +122,31 @@ useEffect(() => {
           
 
         </div>
+        {
+          (l.type==='room' && add)?(
+            <div className='checkouts'>
+              <div className='cartHandled' >
+                 <p>Days</p>
+                {
+                  days>=1?(
+                    <button className="quan" 
+                onClick={()=>{setDays(days-1)
+                  dispatch(updateDays({id:l._id,days:days-1}))
+                } 
+                }>-</button>
+                  ):""
+                }
+                
+                <p className='numberd'>{days}</p>
+                <button className="quan" onClick={()=>{setDays(days+1)
+                 dispatch(updateDays({id:l._id,days:days+1}))
+                } 
+
+                }>+</button>
+              </div>
+            </div>
+          ):""
+        }
        
             <div className="desc1">
             
