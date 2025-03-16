@@ -64,7 +64,7 @@ e.preventDefault()
       setOrdering(true)
        let price=orderCart.totalPrice
     let services=orderCart.items.map(item=>item.id)
-    let details=orderCart.items.map(item=>(item.id` name:${item.name},quantity:${item.quantity},price:${item.price}  ${item.type==="room"?"Days:":""} ${item.type==="room"?item.days:""}.`))
+    let details=orderCart.items.map(item=>(` name:${item.name},quantity:${item.quantity},price:${item.price}  ${item.type==="room"?"Days:":""} ${item.type==="room"?item.days:""}.`))
       console.log({userEmail,type,price,services,details});
 
     const receipt= await axios.post(api+`/api/receipt/receipt-create/${id}`,{userEmail,type:"various",price,services,details},{withCredentials: true})
