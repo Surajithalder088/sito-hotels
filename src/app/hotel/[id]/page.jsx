@@ -197,9 +197,9 @@ e.preventDefault()
             <p className="">({hotel.email})</p>
             <p className="">{hotel.address}</p>
             </div>
-             <img className="phone" src="/vercel.svg" onClick={()=>alert("call to hotel ")}/>
+             <img className="phone" src="/mobile-logo.jpg" onClick={()=>alert("call to hotel ")}/>
             <p className="aboute">Totel Services: {hotel.services.length}</p>
-            <p  className="aboute">hotel is Registered at : {format(new Date(hotel.createdAt ),'dd MMM yyyy,hh:mm a')}</p>
+            <p  className="aboute">Registered at : {format(new Date(hotel.createdAt ),'dd MMM yyyy,hh:mm a')}</p>
            
            <div className="reveiw"><img src="/star-fill.png"/><p>{(hotel.starValue /hotel.starQunatity) ||0 }</p>
             <p>({hotel.starQunatity})</p>
