@@ -25,6 +25,11 @@ const Payment = () => {
  const [price,setPrice]=useState(1)
 
 
+ const[amount,setAmount]=useState(0)
+ const [customerName,setCustomerName]=useState("")
+ const [customerEmail,setCustomerEmail]=useState("")
+ const [customerPhone,setCustomerPhone]=useState("")
+
  const fetchingPaymentIntent=async()=>{
   try {
    const respons= await fetch(`${api}/create-payment-intent`,{
@@ -76,7 +81,41 @@ const Payment = () => {
   
   }
 
+const handlePayment=async()=>{
+  if(!amount||!customerEmail||!customerName||!customerPhone){
+  //  alert("Fill all details")
+   // return
+  }
+  console.log("upi");
+  
+    try {
+      const respons=await fetch(`${api}/api/payment/create-order`,{
+        method:"POST",
+        headers:{"Content-Type":"application/json"},
+        body:JSON.stringify({
+          orderId:"order_"+Date.now(),
+          amount:"0",
+          customer_name:"o",
+          customer_email:"o",
+          customer_phone:"o"
+        })
+      })
+      const data=await respons.json()
+      console.log(data);
+      
 
+      if(data.order_meta.return_url){
+        console.log(data);
+        
+      // window.location.href=data.order_meta.return_url
+      }else{
+        alert("Error to generate payment link")
+      }
+    } catch (error) {
+      console.log("payment error",error);
+      
+    }
+}
   
 
   useEffect(()=>{
@@ -113,16 +152,14 @@ const Payment = () => {
    
     >
       
-      <h2>Make Payment </h2>
-      <span>Fill your debit card details:</span>
+    
       <span>Total Payable price :{order.price}</span>
 
-    <input className="input" placeholder="1254 1254 1254 1254" value={cardNumber} onChange={(e)=>setCardNumber(e.target.value)}/>
-    <div className="access">
-    <input className="input" placeholder="513" value={cvv} onChange={(e)=>setCvv(e.target.value)}/> 
-    <input className="input" placeholder="03/27" value={date} onChange={(e)=>setDate(e.target.value)}/>
-      </div>
-      <button className="paybill" onClick={payBill}>Pay</button>
+    <input className="input" placeholder="Name" value={customerName} onChange={(e)=>setCustomerName(e.target.value)}/>
+    <input className="input" placeholder="Email" value={customerEmail} onChange={(e)=>setCustomerEmail(e.target.value)}/>
+    <input className="input" placeholder="phone" value={customerPhone} onChange={(e)=>setCustomerPhone(e.target.value)}/>
+    <input type="number" className="input" placeholder="amount" value={amount} onChange={(e)=>setAmount(e.target.value)}/>
+      <button className="paybill" onClick={handlePayment}>Pay</button>
       
       <div className="upi" onClick={()=>alert('G pay is under construction')}>pay using <span className="gpay">GPay</span> </div>
     </div>

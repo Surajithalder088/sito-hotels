@@ -14,12 +14,13 @@ const hotelRegister = () => {
     const[email,setEmail]=useState("")
     const[name,setName]=useState("")
     const[password,setPassword]=useState("")
+    const[address,setAddress]=useState("")
     const router=useRouter()
 
     const apiregister=async(e)=>{
         e.preventDefault()
  try{
-     const res= await axios.post(api+`/api/hotel/register`,{name,email,password})
+     const res= await axios.post(api+`/api/hotel/register`,{name,email,password,address})
      console.log(res.data);
      alert("registered successfully")
      router.push(`/hotel-services/${res.data.newUser._id}`)
@@ -41,17 +42,26 @@ const hotelRegister = () => {
                  <input
                  type='String'
                  placeholder='Enter Your Name'
+                 value={name}
                  onChange={(e)=>setName(e.target.value)}
                  />
                 <input
                  type='email'
                  placeholder='Enter Your Email'
+                 value={email}
                  onChange={(e)=>setEmail(e.target.value)}
                  />
                  <input
                  type='password'
                  placeholder='Enter Your password'
+                 value={password}
                  onChange={(e)=>setPassword(e.target.value)}
+                 />
+                 <input
+                 type='text'
+                 placeholder='Enter your hotel address'
+                 value={address}
+                 onChange={(e)=>setAddress(e.target.value)}
                  />
                  <button  type='submit'>Register</button>
             </form>
