@@ -42,7 +42,7 @@ const EditService = () => {
       e.preventDefault()
       try{    
         setLoad(true)
-     const res= await axios.put(api+`/api/hotel/edit/${id}`,{image,address},{withCredentials:true})
+     const res= await axios.put(api+`/api/hotel/edit/${id}`,{image,address,name},{withCredentials:true})
      console.log(res.data);
      window.history.back()
      redirect(`../../hotel-services/${hotel}`)
