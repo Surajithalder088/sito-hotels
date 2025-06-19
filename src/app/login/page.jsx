@@ -21,17 +21,20 @@ const login = () => {
         e.preventDefault()
         try{
 
+       console.log(email,password);
        
         setLoading(true)
        const data=await loginApi({email,password})
       
-       console.log(data.existingUser);
+       console.log(data);
        
       dispatch(userAuth(data.existingUser.email))
        route.push('/profile')
      }catch(error){
         console.log(error);
         
+     }finally{
+        setLoading(false)
      }
        
     }

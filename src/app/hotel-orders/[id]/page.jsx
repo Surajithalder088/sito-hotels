@@ -11,6 +11,7 @@ const hotelOrders = () => {
     const [orders,setOrders]=useState([])
  const [searchId,setSearchId]=useState("")
     const {id}=useParams()
+    const[load,setLoad]=useState(false)
    
   const navigate=useRouter()
     const fetchHotelData=async()=>{
@@ -30,6 +31,51 @@ const hotelOrders = () => {
     useEffect(() => {
       fetchHotelData()
     }, [])
+
+    const handlePayment=async(id)=>{
+  
+  setLoad(true)
+ 
+  
+    try {
+      const data=await fetch(`${api}/api/payment/create-order`,{
+        method:"POST",
+        headers:{"Content-Type":"application/json"},
+        body:JSON.stringify({
+          orderId:id,
+          amount:0,
+          customer_name:"",
+          customer_email:"",
+          customer_phone:""
+        })
+      },{withCredentials:true})
+      
+      console.log("payment status",data);
+     
+        setLoad(false)
+        alert("Payment Successfull")
+        navigate.push("/")
+        
+      
+    
+      
+
+      // if(data.order_meta.return_url){
+      //   console.log(data);
+        
+      // // window.location.href=data.order_meta.return_url
+      // }else{
+      //   alert("Error to generate payment link")
+      // }
+    } catch (error) {
+      console.log("payment error",error);
+      alert("Failed to payment")
+      navigate.push("/")
+      
+    }finally{
+      setLoad(false)
+    }
+}
 
     
 
@@ -71,6 +117,13 @@ const hotelOrders = () => {
               <div className="paid"></div>
             ):(
               <div className="pending"></div>
+            )}
+             {o.paid?(
+              ""
+            ):(
+              <div style={{border:"1px solid black",padding:"10px",cusrsor:"pointer"}}
+              onClick={()=>handlePayment(o._id)}
+              >{load?"processing..":"Conform paid"}</div>
             )}
           </div>
             </div>
